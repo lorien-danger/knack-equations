@@ -29,6 +29,11 @@ def tex(e) -> str:
 
 def _add(e: Add) -> str:
     terms = e.as_ordered_terms()
+    # a polynomial in its usual order (-2x + 2); anything else with a term that isn't negative first (\cos x - \sin x)
+    if _is_neg(terms[0]) and not e.is_polynomial(x):
+        first = next((t for t in terms if not _is_neg(t)), None)
+        if first is not None:
+            terms = [first] + [t for t in terms if t is not first]
     out = _term(terms[0])
     for t in terms[1:]:
         c, rest = t.as_coeff_Mul()
@@ -185,7 +190,7 @@ def _factor(e, in_product=False) -> str:
 
 def derivative(f):
     d = sp.diff(f, x)
-    cands = []
+    cands, written = [], {}
     for g in (d, sp.simplify(d), sp.factor(d), sp.together(d), sp.expand(d), sp.trigsimp(d), sp.cancel(d)):
         try:
             s = tex(g)
@@ -195,7 +200,12 @@ def derivative(f):
             continue
         if s not in cands:
             cands.append(s)
-    cands.sort(key=len)
+            written[s] = g
+    # a writing that brings in no function f doesn't have (no \cosh in a logistic curve's derivative), then the shortest
+    have = {type(a) for a in f.atoms(sp.Function)}
+    def strange(g):
+        return any(type(a) not in have for a in g.atoms(sp.Function))
+    cands.sort(key=lambda s: (strange(written[s]), len(s)))
     return cands
 
 
@@ -219,7 +229,12 @@ def vertical(f, period):
     step = sp.nsimplify(period / len(inside))
     if all(sp.simplify(inside[i] - inside[0] - i * step) == 0 for i in range(len(inside))):
         a = inside[0]
-        return ['x = %s + n%s' % (tex(a), _factor(step) if step != 1 else '') if a != 0 else 'x = n%s' % _factor(step)]
+        c = sp.nsimplify(step / pi)
+        if not isinstance(c, Rational):
+            return None
+        top = ('' if c.p == 1 else str(c.p)) + r'n\pi'
+        n = top if c.q == 1 else r'\frac{%s}{%d}' % (top, c.q)
+        return ['x = %s + %s' % (tex(a), n) if a != 0 else 'x = ' + n]
     return None
 
 
@@ -252,6 +267,13 @@ def end(f, side, period):
             return 'stops'
     except Exception:
         pass
+    g0 = sp.lambdify(x, f, 'mpmath')
+    import mpmath
+    try:
+        if any(mpmath.im(g0(v if side == sp.oo else -v)) != 0 for v in (100, 1000)):
+            return 'stops'
+    except (ValueError, ZeroDivisionError):
+        return 'stops'
     if period is not None:
         return 'repeats'
     try:
@@ -279,6 +301,26 @@ def explicit(F):
     return sols[0] if len(sols) == 1 and not sols[0].has(y) else None
 
 
+def fundamental(f, period):
+    """sympy's period may be a multiple of the smallest (it gives 2π for sin² x): the smallest P/k that f repeats by"""
+    g = sp.lambdify(x, f, 'mpmath')
+    pts = [-2.917 + 0.6173 * i for i in range(12)]
+
+    def repeats(p):
+        for v in pts:
+            try:
+                a, b = complex(g(v)), complex(g(v + float(p)))
+            except Exception:
+                continue
+            if abs(a - b) > 1e-9 * (1 + abs(a)):
+                return False
+        return True
+    for k in (6, 5, 4, 3, 2):
+        if repeats(period / k):
+            return period / k
+    return period
+
+
 def main(src, dst):
     out = {}
     for row in json.load(open(src)):
@@ -292,13 +334,20 @@ def main(src, dst):
             period = sp.periodicity(f, x)
         except Exception:
             period = None
+        if period == 0:
+            period = None
+        if period is not None:
+            period = fundamental(f, period)
+        # sympy's limits of b**x with a real x are wrong (2**x -> oo at -oo): as e**(x ln b) they are right
+        f_lim = f.replace(lambda e: e.is_Pow and e.base.is_number and e.exp.has(x), lambda e: sp.exp(e.exp * sp.log(e.base)))
         r = {'dCandidates': derivative(f) if row.get('derive', True) else [],
              'period': tex(period) if period is not None else None,
              'periodValue': float(period) if period is not None else None,
              'vertical': vertical(f, period),
-             'left': at_infinity(f, -sp.oo), 'right': at_infinity(f, sp.oo),
-             'ends': [end(f, -sp.oo, period), end(f, sp.oo, period)],
-             'explicit': 'y = ' + tex(f) if 'F' in row else None}
+             'left': at_infinity(f_lim, -sp.oo), 'right': at_infinity(f_lim, sp.oo),
+             'ends': [end(f_lim, -sp.oo, period), end(f_lim, sp.oo, period)],
+             'explicit': 'y = ' + tex(f) if 'F' in row else None,
+             'constant': not f.has(x)}
         out[row['id']] = r
         print('.', end='', flush=True, file=sys.stderr)
     print(file=sys.stderr)
