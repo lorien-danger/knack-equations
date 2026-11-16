@@ -1,0 +1,136 @@
+What build.ts checked, and what it found. Every fact in rows.jsonl passed its check (a failure stops the build);
+these are notes for whoever chooses the curves.
+
+sinc: undefined at x = 0 but no asymptote there (a single missing point)
+
+215 curves; 160 of them y as a function of x. Families:
+  polynomial › line: 14
+  polynomial › quadratic: 23
+  polynomial › cubic: 15
+  polynomial › degree 4 and up: 7
+  rational › reciprocal: 8
+  rational › reciprocal square: 4
+  rational › quotient of polynomials: 6
+  root and absolute value › square root: 7
+  root and absolute value › cube root: 4
+  root and absolute value › absolute value: 8
+  exponential and logarithm › exponential: 10
+  exponential and logarithm › logistic: 4
+  exponential and logarithm › logarithm: 8
+  exponential and logarithm › hyperbolic: 5
+  trigonometric › sine and cosine: 13
+  trigonometric › tangent, secant and kin: 5
+  trigonometric › inverse: 3
+  combination › product: 5
+  combination › bell curve: 4
+  combination › composition: 3
+  combination › sum: 4
+  conic section › circle: 5
+  conic section › ellipse: 4
+  conic section › parabola on its side: 5
+  conic section › hyperbola: 5
+  beyond the conics › superellipse: 3
+  beyond the conics › cubic curve: 5
+  polar curve › rose: 5
+  polar curve › limaçon: 5
+  polar curve › spiral: 4
+  polar curve › lemniscate: 3
+  parametric curve › Lissajous figure: 5
+  parametric curve › cycloid: 3
+  parametric curve › rolling circle: 3
+
+roots:
+    68 × 1 root
+    38 × no roots
+    23 × 2 roots
+    23 × infinitely many roots
+    5 × 3 roots
+    2 × 4 roots
+    1 × 5 roots
+turning points:
+    76 × no turning points
+    43 × 1 turning point
+    25 × infinitely many turning points
+    10 × 2 turning points
+    5 × 3 turning points
+    1 × 4 turning points
+symmetry:
+    79 × neither even nor odd
+    43 × even
+    38 × odd
+    15 × about the x-axis
+    14 × about the y-axis, about the x-axis, about the origin
+    9 × about the y-axis, about the x-axis, about the origin, about y = x
+    8 × no symmetry
+    6 × about the y-axis
+    2 × about the origin, about y = x
+    1 × about y = x
+far left, far right:
+    33 × left: up, right: up
+    31 × left: levels off, right: levels off
+    30 × left: down, right: up
+    22 × left: repeats, right: repeats
+    9 × left: stops, right: up
+    7 × left: up, right: down
+    7 × left: down, right: down
+    6 × left: levels off, right: up
+    3 × left: stops, right: stops
+    2 × left: stops, right: down
+    2 × left: up, right: stops
+    2 × left: up, right: levels off
+    2 × left: down, right: levels off
+    1 × left: levels off, right: down
+    1 × left: growing waves, right: growing waves
+    1 × left: growing waves, right: levels off
+    1 × left: waves, right: waves
+repeats every:
+    137 × never repeats
+    14 × repeats every 2π
+    6 × repeats every π
+    1 × repeats every 4π
+    1 × repeats every 2
+made from its parent by:
+    17 × nothing: the parent itself
+    8 × reflected in the x-axis
+    8 × shifted right
+    7 × stretched vertically
+    7 × shifted down
+    6 × shifted up
+    6 × stretched vertically, stretched horizontally
+    5 × squashed vertically
+    5 × shifted left
+    4 × reflected in the y-axis
+    4 × stretched horizontally
+    4 × squashed horizontally
+    3 × shifted right, shifted down
+    3 × stretched vertically, shifted right, shifted down
+    3 × enlarged
+    2 × squashed vertically, shifted left, shifted down
+    2 × shifted left, shifted down
+    2 × reflected in the x-axis, shifted left, shifted up
+    2 × stretched vertically, shifted right
+    2 × stretched vertically, squashed horizontally
+    1 × reflected in the x-axis, stretched vertically, shifted up
+    1 × squashed vertically, shifted down
+    1 × reflected in the x-axis, shifted up
+    1 × squashed vertically, shifted up
+    1 × reflected in the x-axis, squashed vertically, shifted left, shifted up
+    1 × reflected in the x-axis, shifted right, shifted up
+    1 × shifted right, shifted up
+    1 × shifted left, shifted up
+    1 × squashed vertically, shifted right
+    1 × stretched vertically, shifted right, shifted up
+    1 × reflected in the x-axis, stretched vertically, shifted left, shifted up
+    1 × reflected in the x-axis, stretched vertically
+    1 × reflected in the y-axis, stretched horizontally
+    1 × reflected in the x-axis, reflected in the y-axis, stretched vertically, shifted up
+    1 × stretched vertically, shifted left, shifted up
+    1 × reflected in the x-axis, shrunk, shifted up
+    1 × stretched vertically, shifted left
+    1 × reflected in the x-axis, shifted right
+    1 × stretched vertically, stretched horizontally, shifted right
+    1 × enlarged, shifted right
+    1 × enlarged, shifted left, shifted up
+    1 × enlarged, shifted right, shifted down
+    1 × stretched vertically, stretched horizontally, shifted right, shifted down
+    1 × reflected in the y-axis, shifted right, shifted up

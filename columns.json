@@ -1,0 +1,221 @@
+{
+ "name": "Equations",
+ "item": "equation",
+ "items": "equations",
+ "title": "name",
+ "practices": [
+  {
+   "name": "Equation and graph",
+   "columns": [
+    "equation",
+    "graph"
+   ]
+  },
+  {
+   "name": "Families and their general forms",
+   "columns": [
+    "graph",
+    "family",
+    "general form"
+   ]
+  },
+  {
+   "name": "Moving the parent",
+   "columns": [
+    "graph",
+    "parent",
+    "made from its parent by"
+   ]
+  },
+  {
+   "name": "Roots, turning points and repeats from the formula",
+   "columns": [
+    "equation",
+    "roots",
+    "turning points",
+    "repeats every"
+   ]
+  },
+  {
+   "name": "Ends, asymptotes and symmetry from the formula",
+   "columns": [
+    "equation",
+    "far left, far right",
+    "asymptotes",
+    "symmetry"
+   ]
+  },
+  {
+   "name": "A graph and its derivative",
+   "columns": [
+    "graph",
+    "derivative graph",
+    "derivative"
+   ]
+  }
+ ],
+ "columns": [
+  {
+   "name": "equation",
+   "type": "plane",
+   "space": "formula",
+   "label": "Equation",
+   "window": {
+    "x": [
+     -5,
+     5
+    ],
+    "y": [
+     -5,
+     5
+    ]
+   }
+  },
+  {
+   "name": "graph",
+   "type": "plane",
+   "space": "graph",
+   "label": "Graph",
+   "window": {
+    "x": [
+     -5,
+     5
+    ],
+    "y": [
+     -5,
+     5
+    ]
+   }
+  },
+  {
+   "name": "name",
+   "type": "plain",
+   "label": "Name"
+  },
+  {
+   "name": "family",
+   "type": "tree",
+   "label": "Family"
+  },
+  {
+   "name": "general form",
+   "type": "plain",
+   "tex": true,
+   "label": "General form"
+  },
+  {
+   "name": "parent",
+   "type": "plane",
+   "space": "formula",
+   "label": "Parent",
+   "window": {
+    "x": [
+     -5,
+     5
+    ],
+    "y": [
+     -5,
+     5
+    ]
+   }
+  },
+  {
+   "name": "made from its parent by",
+   "type": "parts",
+   "label": "Made from its parent by"
+  },
+  {
+   "name": "roots",
+   "type": "plain",
+   "label": "Roots",
+   "order": [
+    "no roots",
+    "1 root",
+    "2 roots",
+    "3 roots",
+    "4 roots",
+    "5 roots",
+    "infinitely many roots"
+   ]
+  },
+  {
+   "name": "turning points",
+   "type": "plain",
+   "label": "Turning points",
+   "order": [
+    "no turning points",
+    "1 turning point",
+    "2 turning points",
+    "3 turning points",
+    "4 turning points",
+    "5 turning points",
+    "infinitely many turning points"
+   ]
+  },
+  {
+   "name": "asymptotes",
+   "type": "parts",
+   "label": "Asymptotes"
+  },
+  {
+   "name": "symmetry",
+   "type": "parts",
+   "label": "Symmetry"
+  },
+  {
+   "name": "far left, far right",
+   "type": "plain",
+   "label": "Far left, far right"
+  },
+  {
+   "name": "repeats every",
+   "type": "plain",
+   "label": "Repeats",
+   "order": [
+    "never repeats",
+    "repeats every 2",
+    "repeats every π",
+    "repeats every 2π",
+    "repeats every 4π"
+   ]
+  },
+  {
+   "name": "meets the y-axis at",
+   "type": "number",
+   "label": "Meets the y-axis at",
+   "digits": 3
+  },
+  {
+   "name": "derivative",
+   "type": "plane",
+   "space": "formula",
+   "label": "Derivative",
+   "window": {
+    "x": [
+     -5,
+     5
+    ],
+    "y": [
+     -5,
+     5
+    ]
+   }
+  },
+  {
+   "name": "derivative graph",
+   "type": "plane",
+   "space": "graph",
+   "label": "Graph of the derivative",
+   "window": {
+    "x": [
+     -5,
+     5
+    ],
+    "y": [
+     -5,
+     5
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,432 @@
+Each curve's five nearest, as the app measures it (how far apart the drawings are, on average)
+
+line  y = x
+    nearest: x-plus-sin (0.081), cbrt-2 (0.097), x3-quarter (0.120), sinh (0.154), rational-slant (0.155)
+line-2x  y = 2x
+    nearest: sinh (0.036), x3-plus-x (0.050), x3 (0.053), x5 (0.073), x3-moved (0.082)
+line-half-x  y = \frac{1}{2}x
+    nearest: cbrt (0.052), arctan (0.058), tanh (0.085), sin-slow (0.089), cbrt-right2 (0.122)
+line-minus-x  y = -x
+    nearest: x3-like-sin (0.167), rose-4 (0.200), x3-flip (0.205), hyperbola (0.211), rose-sin-2 (0.226)
+line-up3  y = x + 3
+    nearest: exp-10 (0.145), exp (0.147), logistic-steep (0.157), logistic-4 (0.170), exp-2 (0.173)
+line-down2  y = x - 2
+    nearest: log2 (0.137), ln (0.140), log10 (0.164), x3-triple-root (0.168), line-intercepts-2 (0.172)
+line-minus-2x-up3  y = -2x + 3
+    nearest: ln-flip (0.153), x2-factored-a (0.199), rose-4 (0.211), x2-flip-up4 (0.220), recip2-down2 (0.230)
+line-third-x-down1  y = \frac{1}{3}x - 1
+    nearest: cbrt-right2 (0.074), sin-pi (0.164), sqrt-down2 (0.166), cbrt (0.169), line-half-x (0.170)
+line-horizontal  y = 3
+    nearest: cycloid-prolate (0.151), abs-of-sin (0.156), sin-up2 (0.168), catenary-2 (0.172), abs-of-parabola (0.197)
+line-vertical  x = 2
+    nearest: cusp-curve (0.117), x2-vertex-b (0.199), x2-standard-d (0.199), x5-five-roots (0.212), x4-w (0.216)
+line-intercepts  2x + 3y = 6
+    nearest: exp-half (0.113), exp-decay (0.135), abs-right2 (0.144), arccos (0.196), abs-of-parabola (0.206)
+line-intercepts-2  x - 2y = 4
+    nearest: sqrt-down2 (0.167), line-third-x-down1 (0.171), line-down2 (0.172), cbrt-right2 (0.224), recip2-flip (0.237)
+line-point-slope  y - 1 = 2(x - 3)
+    nearest: x3-right2 (0.082), log2 (0.163), x3-double-root-0 (0.170), ln (0.187), line-down2 (0.194)
+line-point-slope-2  y + 2 = -\frac{1}{2}(x - 1)
+    nearest: exp-flip (0.150), rose-4 (0.211), sideways-left3 (0.221), x3-like-sin (0.224), spiral-log (0.228)
+x2  y = x^2
+    nearest: cosh (0.032), x4-two-touches (0.042), x4 (0.050), x2-wide-up1 (0.060), x2-narrow (0.066)
+x2-right2  y = (x - 2)^2
+    nearest: x2-standard-b (0.067), abs-right2 (0.140), x2-factored-b (0.151), x2-factored-a (0.152), sqrt-moved (0.165)
+x2-left3  y = (x + 3)^2
+    nearest: sideways-moved (0.187), sqrt-mirror (0.198), line-up3 (0.238), circle-moved (0.254), exp-10 (0.260)
+x2-down3  y = x^2 - 3
+    nearest: x2-factored-c (0.051), x4-w (0.079), x4-four-roots (0.094), x5-five-roots (0.115), ellipse-expanded (0.121)
+x2-up1  y = x^2 + 1
+    nearest: cosh (0.040), x2-narrow (0.045), x4 (0.063), x4-two-touches (0.067), x2 (0.068)
+x2-right2-down3  y = (x - 2)^2 - 3
+    nearest: x2-factored-b (0.084), x2-factored-a (0.086), cardioid (0.126), circle-right2 (0.143), rose-4 (0.153)
+x2-flip  y = -x^2
+    nearest: x5-five-roots (0.155), spiral-log (0.167), rose-4 (0.174), x4-w (0.175), rose-sin-2 (0.190)
+x2-flip-up4  y = -x^2 + 4
+    nearest: ellipse-tall (0.106), ellipse-expanded (0.122), x5-five-roots (0.124), x4-four-roots (0.132), nephroid (0.133)
+x2-narrow  y = 2x^2
+    nearest: x4 (0.020), x2-up1 (0.045), x2 (0.066), x4-two-touches (0.073), cosh (0.079)
+x2-wide  y = \frac{1}{2}x^2
+    nearest: abs (0.090), x2 (0.091), x2-wide-up1 (0.094), x4-two-touches (0.102), abs-of-parabola (0.105)
+x2-wide-up1  y = \frac{1}{2}x^2 + 1
+    nearest: cosh (0.029), catenary-2 (0.059), x2 (0.060), x2-up1 (0.078), x2-standard-e (0.082)
+x2-vertex-a  y = -\frac{1}{2}(x + 1)^2 + 3
+    nearest: x2-standard-c (0.126), abs-moved (0.167), x-sin-x (0.167), x2-flip-up4 (0.168), cos-3-fast (0.174)
+x2-vertex-b  y = 2(x - 1)^2 - 4
+    nearest: x2-standard-d (0.033), x2-factored-b (0.100), rose-4 (0.118), elliptic-two (0.134), x5-five-roots (0.137)
+x2-factored-a  y = (x - 1)(x - 4)
+    nearest: x2-right2-down3 (0.086), circle-right2 (0.143), x2-right2 (0.152), ln-flip (0.153), cardioid (0.159)
+x2-factored-b  y = x(x - 3)
+    nearest: x2-right2-down3 (0.084), x2-standard-d (0.091), x2-vertex-b (0.100), rose-4 (0.136), limacon-loop (0.146)
+x2-factored-c  y = (x + 2)(x - 2)
+    nearest: x2-down3 (0.051), x4-w (0.076), ellipse-tall (0.106), x4-four-roots (0.115), ellipse-expanded (0.122)
+x2-factored-d  y = -(x + 1)(x - 3)
+    nearest: rose-4 (0.143), lissajous-3-4 (0.151), rose-sin-2 (0.159), lissajous-3-2 (0.161), x4-m (0.162)
+x2-factored-e  y = \frac{1}{2}(x + 4)(x - 1)
+    nearest: x2-standard-a (0.105), rose-4 (0.165), exp-down2 (0.165), lemniscate-tilted (0.168), rose-sin-2 (0.181)
+x2-standard-a  y = x^2 + 2x - 3
+    nearest: x2-factored-e (0.105), rose-4 (0.143), lissajous-3-4 (0.151), x4-w (0.151), rose-sin-2 (0.159)
+x2-standard-b  y = x^2 - 4x + 5
+    nearest: x2-right2 (0.067), sqrt-moved (0.156), abs-of-parabola (0.189), sqrt (0.216), abs-right2 (0.220)
+x2-standard-c  y = -x^2 - 2x + 2
+    nearest: x2-vertex-a (0.126), rose-4 (0.135), x3-three-roots (0.136), x5-five-roots (0.141), rose-sin-2 (0.144)
+x2-standard-d  y = 2x^2 - 4x - 1
+    nearest: x2-vertex-b (0.033), x2-factored-b (0.091), rose-4 (0.116), x4-four-roots (0.133), x5-five-roots (0.136)
+x2-standard-e  y = x^2 + x + 1
+    nearest: cosh (0.072), x2-up1 (0.075), x2-wide-up1 (0.082), x2-narrow (0.082), x2 (0.084)
+x3  y = x^3
+    nearest: x5 (0.020), x3-plus-x (0.034), sinh (0.047), line-2x (0.053), x3-moved (0.091)
+x3-right2  y = (x - 2)^3
+    nearest: line-point-slope (0.082), log2 (0.121), x3-double-root-0 (0.135), ln (0.140), x3-triple-root (0.160)
+x3-up2  y = x^3 + 2
+    nearest: x3 (0.106), x5 (0.108), x3-plus-x (0.110), line-2x (0.123), sinh (0.126)
+x3-flip  y = -x^3
+    nearest: x5-five-roots (0.140), rose-2 (0.164), rose-4 (0.166), x4-w (0.186), rose-sin-2 (0.188)
+x3-quarter  y = \frac{1}{4}x^3
+    nearest: sinh (0.080), x3-minus-3x (0.092), x3 (0.115), line-2x (0.119), line (0.120)
+x3-triple-root  y = \frac{1}{2}(x - 1)^3
+    nearest: exp-charge (0.131), x3-double-root-0 (0.133), lemniscate-tilted (0.142), x3-quarter (0.151), ln-up2 (0.155)
+x3-moved  y = \frac{1}{2}(x + 1)^3 - 2
+    nearest: line-2x (0.082), x3-plus-x (0.084), x3 (0.091), x5 (0.091), sinh (0.093)
+x3-three-roots  y = \frac{1}{2}x(x - 2)(x + 3)
+    nearest: x3-double-root (0.064), rose-4 (0.098), rose-sin-2 (0.099), x4-m (0.105), x5-five-roots (0.115)
+x3-three-roots-flip  y = -\frac{1}{2}(x + 2)(x - 1)(x - 3)
+    nearest: x4-m (0.112), rose-4 (0.115), x4-w (0.121), lissajous-3-4 (0.123), rose-sin-2 (0.129)
+x3-double-root  y = \frac{1}{2}(x - 1)^2(x + 3)
+    nearest: x3-three-roots (0.064), x3-minus-3x-up3 (0.119), x4-m (0.137), x4-four-roots (0.141), rose-4 (0.152)
+x3-double-root-0  y = x^3 - 3x^2
+    nearest: x3-triple-root (0.133), x3-right2 (0.135), rose-4 (0.145), elliptic-two (0.153), rose-sin-2 (0.154)
+x3-minus-3x  y = x^3 - 3x
+    nearest: x5-five-roots (0.059), x3-quarter (0.092), x4-w (0.094), rose-4 (0.096), x4-four-roots (0.105)
+x3-minus-3x-up3  y = x^3 - 3x + 3
+    nearest: x3-double-root (0.119), x4-four-roots (0.135), x5-five-roots (0.140), x4-two-touches (0.158), x3-up2 (0.161)
+x3-plus-x  y = x^3 + x
+    nearest: x5 (0.021), x3 (0.034), line-2x (0.050), sinh (0.076), x3-moved (0.084)
+x3-like-sin  y = x - \frac{x^3}{6}
+    nearest: rose-4 (0.136), rose-sin-2 (0.137), x3-three-roots-flip (0.141), lemniscate-small (0.150), x4-m (0.154)
+x4  y = x^4
+    nearest: x2-narrow (0.020), x2 (0.050), x4-two-touches (0.057), x2-up1 (0.063), cosh (0.085)
+x5  y = x^5
+    nearest: x3 (0.020), x3-plus-x (0.021), line-2x (0.073), sinh (0.076), x3-moved (0.091)
+x4-w  y = x^4 - 4x^2
+    nearest: x5-five-roots (0.057), x2-factored-c (0.076), x2-down3 (0.079), x4-four-roots (0.089), x3-minus-3x (0.094)
+x4-four-roots  y = (x^2 - 1)(x^2 - 4)
+    nearest: x5-five-roots (0.068), rose-4 (0.079), ellipse-expanded (0.087), x4-w (0.089), x2-down3 (0.094)
+x4-m  y = -\frac{1}{4}(x^2 - 1)(x^2 - 9)
+    nearest: rose-sin-2 (0.090), rose-4 (0.091), lissajous-3-4 (0.093), lissajous-3-2 (0.102), x3-three-roots (0.105)
+x4-two-touches  y = (x - 1)^2(x + 1)^2
+    nearest: x2 (0.042), x4 (0.057), cosh (0.064), x2-up1 (0.067), x2-narrow (0.073)
+x5-five-roots  y = x(x^2 - 1)(x^2 - 4)
+    nearest: x4-w (0.057), x3-minus-3x (0.059), x4-four-roots (0.068), rose-4 (0.075), rose-sin-2 (0.082)
+recip  y = \frac{1}{x}
+    nearest: hyperbola-xy (0.057), astroid (0.079), wave-packet (0.104), superellipse-half (0.114), rose-4 (0.115)
+recip-right2  y = \frac{1}{x - 2}
+    nearest: rose-4 (0.138), recip2-right2 (0.141), wave-packet (0.149), nodal (0.151), rose-2 (0.157)
+recip-up2  y = \frac{1}{x} + 2
+    nearest: recip-linear (0.126), rose-sin-3 (0.128), rose-4 (0.141), ln-abs (0.147), rose-2 (0.160)
+recip-moved  y = \frac{1}{x + 1} - 2
+    nearest: recip2-down2 (0.107), rose-4 (0.151), spiral-archimedes (0.159), rose-3 (0.164), rose-sin-2 (0.167)
+recip-flip  y = -\frac{1}{x}
+    nearest: astroid (0.079), wave-packet (0.104), superellipse-half (0.114), rose-4 (0.115), rose-2 (0.120)
+recip-4  y = \frac{4}{x}
+    nearest: hyperbola-xy (0.106), rational-bump (0.145), recip (0.175), lemniscate-tilted (0.197), wave-packet (0.201)
+recip-linear  y = \frac{2x + 1}{x - 1}
+    nearest: recip-up2 (0.126), ln-abs (0.142), rose-sin-3 (0.155), folium (0.158), rose-4 (0.174)
+recip-linear-2  y = \frac{x}{x + 2}
+    nearest: rose-3 (0.131), rose-4 (0.154), damped (0.158), rational-two-walls (0.160), rose-sin-3 (0.163)
+recip2  y = \frac{1}{x^2}
+    nearest: bell-3 (0.043), sech (0.058), witch (0.113), bell (0.117), sinc (0.124)
+recip2-right2  y = \frac{1}{(x - 2)^2}
+    nearest: bell-3-right2 (0.042), exp-right2 (0.098), exp-2 (0.103), exp-slow (0.107), logistic-right2 (0.114)
+recip2-down2  y = \frac{1}{x^2} - 2
+    nearest: recip-moved (0.107), rose-4 (0.114), rose-2 (0.137), x4-four-roots (0.138), wave-packet (0.141)
+recip2-flip  y = -\frac{2}{x^2}
+    nearest: abs-down3 (0.117), wave-packet (0.141), astroid (0.149), rose-2 (0.163), rose-4 (0.169)
+witch  y = \frac{8}{x^2 + 4}
+    nearest: sech (0.049), bell-3 (0.070), bell-3-wide (0.086), sin-squared (0.100), chirp (0.103)
+rational-bump  y = \frac{4x}{x^2 + 1}
+    nearest: tanh (0.071), cbrt (0.078), arctan (0.079), sin-slow (0.084), square-wave-2 (0.124)
+rational-two-walls  y = \frac{x^2}{x^2 - 4}
+    nearest: x4-w (0.104), lissajous-3-2 (0.122), x5-five-roots (0.123), rose-sin-2 (0.128), rose-4 (0.133)
+rational-crosses  y = \frac{x - 1}{(x - 3)(x + 2)}
+    nearest: lissajous-3-2 (0.114), rose-4 (0.119), lissajous-3-4 (0.122), x4-m (0.125), rose-sin-2 (0.128)
+rational-slant  y = \frac{x^2 + 1}{x}
+    nearest: x-plus-sin (0.138), cbrt-2 (0.150), line (0.155), exp-charge (0.163), x-plus-2sin (0.169)
+rational-slant-2  y = \frac{x^2}{x - 1}
+    nearest: nodal (0.164), rose-4 (0.166), exp-down2 (0.180), x3-minus-3x (0.183), x4-w (0.184)
+sqrt  y = \sqrt{x}
+    nearest: sideways (0.126), cycloid (0.145), cycloid-curtate (0.148), sqrt-moved (0.152), cbrt (0.160)
+sqrt-left4  y = \sqrt{x + 4}
+    nearest: abs-of-sin (0.117), logistic-4 (0.132), sin-up2 (0.143), exp-slow (0.155), logistic-right2 (0.156)
+sqrt-down2  y = \sqrt{x} - 2
+    nearest: log10 (0.133), line-third-x-down1 (0.166), line-intercepts-2 (0.167), limacon-loop (0.180), recip2-flip (0.185)
+sqrt-flip  y = -\sqrt{x}
+    nearest: sideways (0.124), limacon-loop (0.175), spiral-log (0.175), circle-right2 (0.183), rose-4 (0.207)
+sqrt-mirror  y = \sqrt{-x}
+    nearest: sideways-flip (0.126), cycloid (0.145), cycloid-curtate (0.148), abs-half (0.164), cusp (0.171)
+sqrt-moved  y = 2\sqrt{x - 1}
+    nearest: sqrt (0.152), x2-standard-b (0.156), x2-right2 (0.165), ln-up2 (0.183), logistic-right2 (0.188)
+semicircle  y = \sqrt{4 - x^2}
+    nearest: bell-3 (0.101), witch (0.107), sech (0.111), diamond (0.134), x4-four-roots (0.140)
+cbrt  y = \sqrt[3]{x}
+    nearest: arctan (0.030), line-half-x (0.052), tanh (0.065), rational-bump (0.078), sin-slow (0.091)
+cbrt-right2  y = \sqrt[3]{x - 2}
+    nearest: line-third-x-down1 (0.074), cbrt (0.103), arctan (0.107), line-half-x (0.122), tanh (0.125)
+cbrt-2  y = 2\sqrt[3]{x}
+    nearest: x-plus-sin (0.032), x-plus-2sin (0.084), line (0.097), lemniscate-tilted (0.132), rational-slant (0.150)
+cusp  y = \sqrt[3]{x^2}
+    nearest: ln-x2 (0.029), cycloid (0.052), abs-half (0.074), cycloid-curtate (0.089), abs-of-sin (0.102)
+abs  y = |x|
+    nearest: x2-wide (0.090), ln-x2 (0.098), cusp (0.115), cycloid-prolate (0.137), x2-wide-up1 (0.150)
+abs-right2  y = |x - 2|
+    nearest: exp-half (0.128), exp-decay (0.136), x2-right2 (0.140), line-intercepts (0.144), x2-factored-b (0.169)
+abs-down3  y = |x| - 3
+    nearest: recip2-flip (0.117), ln-abs (0.147), chirp (0.154), diamond (0.156), sin-pi (0.158)
+abs-moved  y = -|x + 1| + 3
+    nearest: cos-moved (0.131), bell-3 (0.145), sinc (0.151), sech (0.152), chirp (0.154)
+abs-half  y = \frac{1}{2}|x|
+    nearest: cycloid-curtate (0.073), cusp (0.074), cycloid (0.081), ln-x2 (0.086), abs-of-sin (0.123)
+abs-moved-2  y = 2|x - 1| - 4
+    nearest: x2-vertex-b (0.153), x2-factored-b (0.154), rose-4 (0.155), rose-sin-3 (0.157), x2-factored-c (0.161)
+abs-of-parabola  y = |x^2 - 4|
+    nearest: x4-four-roots (0.103), x2-wide (0.105), polar-circle (0.106), cardioid-up (0.111), x2-wide-up1 (0.134)
+abs-of-sin  y = 3|\sin x|
+    nearest: exp-sin (0.093), cycloid (0.097), cusp (0.102), sin-up2 (0.103), cycloid-prolate (0.115)
+exp  y = e^x
+    nearest: exp-2 (0.034), exp-10 (0.047), exp-slow (0.084), logistic-steep (0.088), logistic-4 (0.114)
+exp-decay  y = e^{-x}
+    nearest: exp-half (0.034), arccos (0.127), line-intercepts (0.135), abs-right2 (0.136), recip2 (0.153)
+exp-2  y = 2^x
+    nearest: exp (0.034), exp-slow (0.041), exp-10 (0.088), logistic-steep (0.089), logistic-4 (0.094)
+exp-10  y = 10^x
+    nearest: exp (0.047), exp-2 (0.088), logistic-steep (0.110), recip2 (0.134), exp-slow (0.136)
+exp-half  y = \left(\frac{1}{2}\right)^x
+    nearest: exp-decay (0.034), line-intercepts (0.113), abs-right2 (0.128), arccos (0.154), deltoid (0.158)
+exp-down2  y = e^x - 2
+    nearest: x3-moved (0.125), sinh (0.133), x3 (0.141), line-2x (0.154), lemniscate-tilted (0.154)
+exp-right2  y = e^{x - 2}
+    nearest: logistic-right2 (0.058), recip2-right2 (0.098), exp-slow (0.106), bell-3-right2 (0.111), logistic (0.120)
+exp-flip  y = -e^x
+    nearest: line-point-slope-2 (0.150), recip2-flip (0.169), ln-mirror (0.177), rose-4 (0.189), wave-packet (0.195)
+exp-slow  y = e^{\frac{x}{2}}
+    nearest: exp-2 (0.041), logistic-4 (0.082), exp (0.084), logistic-right2 (0.088), logistic-steep (0.095)
+exp-charge  y = 4 - 4e^{-x}
+    nearest: ln-up2 (0.075), line-2x (0.116), x3-plus-x (0.127), x3-triple-root (0.131), x-plus-2sin (0.138)
+logistic  y = \frac{1}{1 + e^{-x}}
+    nearest: sin-squared (0.064), bell (0.074), chirp (0.079), sin-pi (0.083), bell-3-right2 (0.085)
+logistic-4  y = \frac{4}{1 + e^{-x}}
+    nearest: logistic-steep (0.034), exp-slow (0.082), exp-2 (0.094), exp (0.114), logistic-right2 (0.117)
+logistic-steep  y = \frac{4}{1 + e^{-2x}}
+    nearest: logistic-4 (0.034), exp (0.088), exp-2 (0.089), exp-slow (0.095), exp-10 (0.110)
+logistic-right2  y = \frac{4}{1 + e^{-(x - 2)}}
+    nearest: exp-right2 (0.058), exp-slow (0.088), bell-3-right2 (0.105), recip2-right2 (0.114), logistic-4 (0.117)
+ln  y = \ln x
+    nearest: log2 (0.035), log10 (0.053), ln-abs (0.098), x-exp (0.126), x3-right2 (0.140)
+ln-left3  y = \ln(x + 3)
+    nearest: line-half-x (0.142), lemniscate-tilted (0.150), cbrt (0.150), arctan (0.172), x3-quarter (0.177)
+ln-up2  y = \ln x + 2
+    nearest: exp-charge (0.075), log2 (0.146), rose-4 (0.154), x3-triple-root (0.155), cbrt-2 (0.162)
+ln-flip  y = -\ln x
+    nearest: x2-factored-a (0.153), line-minus-2x-up3 (0.153), recip2-down2 (0.172), exp-decay (0.177), arccos (0.178)
+ln-mirror  y = \ln(-x)
+    nearest: ln-abs (0.098), rose-sin-3 (0.169), exp-flip (0.177), rose-4 (0.191), superellipse-half (0.199)
+log10  y = \log_{10} x
+    nearest: ln (0.053), x-exp (0.091), log2 (0.096), ln-abs (0.126), sqrt-down2 (0.133)
+log2  y = \log_2 x
+    nearest: ln (0.035), log10 (0.096), x3-right2 (0.121), ln-abs (0.129), line-down2 (0.137)
+ln-abs  y = \ln|x|
+    nearest: rose-sin-3 (0.087), ln-mirror (0.098), ln (0.098), log10 (0.126), log2 (0.129)
+cosh  y = \cosh x
+    nearest: x2-wide-up1 (0.029), x2 (0.032), x2-up1 (0.040), x4-two-touches (0.064), x2-standard-e (0.072)
+catenary-2  y = 2\cosh\frac{x}{2}
+    nearest: x2-wide-up1 (0.059), cosh (0.086), x2-up1 (0.109), x2-standard-e (0.119), x2 (0.121)
+sinh  y = \sinh x
+    nearest: line-2x (0.036), x3 (0.047), x5 (0.076), x3-plus-x (0.076), x3-quarter (0.080)
+tanh  y = \tanh x
+    nearest: sin-slow (0.017), arctan (0.027), cbrt (0.065), rational-bump (0.071), line-half-x (0.085)
+sech  y = \frac{3}{\cosh x}
+    nearest: bell-3 (0.018), witch (0.049), recip2 (0.058), bell-3-wide (0.075), semicircle (0.111)
+sin  y = \sin x
+    nearest: chirp (0.077), sin-plus-cos (0.080), sin-tall (0.082), sin-right1 (0.084), square-wave-2 (0.084)
+cos  y = \cos x
+    nearest: chirp (0.064), bell (0.066), sin-pi (0.077), sin-plus-cos (0.086), sin-fast (0.086)
+sin-tall  y = 2\sin x
+    nearest: square-wave-2 (0.035), square-wave-3 (0.036), sin (0.082), sin-plus-cos (0.106), sin-pi (0.113)
+sin-flip  y = -\sin x
+    nearest: sin-pi (0.074), chirp (0.077), sin-fast (0.081), lemniscate-small (0.093), sin-squared (0.094)
+sin-fast  y = \sin 2x
+    nearest: chirp (0.050), sin-pi (0.061), bell (0.077), sin-flip (0.081), cos (0.086)
+sin-slow  y = \sin\frac{x}{2}
+    nearest: tanh (0.017), arctan (0.051), rational-bump (0.084), logistic (0.087), line-half-x (0.089)
+sin-up2  y = \sin x + 2
+    nearest: exp-sin (0.100), abs-of-sin (0.103), cusp (0.132), cycloid (0.133), sqrt-left4 (0.143)
+sin-right1  y = \sin(x - 1)
+    nearest: sin (0.084), chirp (0.085), sin-pi (0.086), sin-fast (0.097), sin-squared (0.111)
+sin-pi  y = \sin \pi x
+    nearest: chirp (0.044), sin-fast (0.061), bell (0.065), sin-flip (0.074), sin-squared (0.076)
+cos-3-fast  y = 3\cos 2x
+    nearest: rose-4 (0.081), lissajous-3-4 (0.082), wave-packet (0.097), rose-sin-2 (0.103), lissajous-1-2 (0.103)
+cos-moved  y = 2\cos(x + 1) + 1
+    nearest: sin-fast (0.112), sin-flip (0.113), chirp (0.126), abs-of-sin (0.129), abs-moved (0.131)
+sin-squared  y = \sin^2 x
+    nearest: chirp (0.062), logistic (0.064), sin-pi (0.076), bell (0.082), sin-fast (0.092)
+sin-plus-cos  y = \sin x + \cos x
+    nearest: sin (0.080), cos (0.086), chirp (0.089), square-wave-2 (0.095), square-wave-3 (0.098)
+tan  y = \tan x
+    nearest: sec (0.092), lissajous-3-4 (0.099), lissajous-3-2 (0.121), lissajous-1-2 (0.133), cos-3-fast (0.142)
+tan-slow  y = \tan\frac{x}{2}
+    nearest: csc (0.095), lissajous-3-2 (0.137), lissajous-1-2 (0.140), lissajous-2-1 (0.144), lissajous-3-4 (0.145)
+cot  y = \cot x
+    nearest: lissajous-3-2 (0.101), lissajous-3-4 (0.102), csc (0.113), rose-4 (0.113), lissajous-2-1 (0.120)
+sec  y = \sec x
+    nearest: tan (0.092), lissajous-3-4 (0.125), lissajous-3-2 (0.140), spiral-fermat (0.148), lissajous-1-2 (0.155)
+csc  y = \csc x
+    nearest: tan-slow (0.095), cot (0.113), lissajous-3-2 (0.113), lissajous-3-4 (0.116), spiral-fermat (0.128)
+arctan  y = \arctan x
+    nearest: tanh (0.027), cbrt (0.030), sin-slow (0.051), line-half-x (0.058), rational-bump (0.079)
+arcsin  y = \arcsin x
+    nearest: circle (0.095), x3-plus-x (0.122), sinh (0.122), x5 (0.125), x3 (0.127)
+arccos  y = \arccos x
+    nearest: exp-decay (0.127), x2-narrow (0.133), x4 (0.154), exp-half (0.154), cycloid-prolate (0.156)
+x-sin-x  y = x\sin x
+    nearest: x4-m (0.122), lissajous-3-4 (0.136), lemniscate (0.146), square-wave-2 (0.153), rose-4 (0.153)
+damped  y = 2e^{-\frac{x}{4}}\sin 3x
+    nearest: rose-4 (0.098), sin-pi (0.105), lissajous-3-4 (0.109), cos-3-fast (0.110), rose-sin-2 (0.120)
+wave-packet  y = 4e^{-\frac{x^2}{8}}\cos 3x
+    nearest: rose-4 (0.048), rose-2 (0.058), astroid (0.069), diamond (0.079), superellipse-half (0.095)
+sinc  y = \frac{4\sin x}{x}
+    nearest: bell-3-wide (0.102), sech (0.117), recip2 (0.124), bell-3 (0.126), abs-of-parabola (0.139)
+x-exp  y = 4xe^{-x}
+    nearest: log10 (0.091), rose-4 (0.123), ln (0.126), rose-3 (0.135), limacon-loop (0.139)
+bell  y = e^{-x^2}
+    nearest: chirp (0.056), sin-pi (0.065), cos (0.066), logistic (0.074), sin-fast (0.077)
+bell-3  y = 3e^{-\frac{x^2}{2}}
+    nearest: sech (0.018), recip2 (0.043), witch (0.070), bell (0.088), chirp (0.097)
+bell-3-right2  y = 3e^{-\frac{(x - 2)^2}{2}}
+    nearest: recip2-right2 (0.042), logistic (0.085), logistic-right2 (0.105), exp-sin (0.107), exp-right2 (0.111)
+bell-3-wide  y = 3e^{-\frac{x^2}{8}}
+    nearest: sech (0.075), witch (0.086), bell-3 (0.101), sinc (0.102), recip2 (0.128)
+chirp  y = \sin(x^2)
+    nearest: sin-pi (0.044), sin-fast (0.050), bell (0.056), sin-squared (0.062), cos (0.064)
+exp-sin  y = e^{\sin x}
+    nearest: abs-of-sin (0.093), sin-up2 (0.100), bell-3-right2 (0.107), cycloid-curtate (0.118), abs-half (0.130)
+ln-x2  y = \ln(x^2 + 1)
+    nearest: cusp (0.029), abs-half (0.086), cycloid (0.086), abs (0.098), abs-of-sin (0.119)
+x-plus-sin  y = x + \sin x
+    nearest: cbrt-2 (0.032), x-plus-2sin (0.076), line (0.081), line-2x (0.121), sinh (0.123)
+x-plus-2sin  y = x + 2\sin x
+    nearest: x-plus-sin (0.076), cbrt-2 (0.084), line-2x (0.115), lemniscate-tilted (0.119), exp-charge (0.138)
+square-wave-2  y = 2\sin x + \frac{2}{3}\sin 3x
+    nearest: square-wave-3 (0.014), sin-tall (0.035), sin (0.084), sin-plus-cos (0.095), lemniscate (0.103)
+square-wave-3  y = 2\sin x + \frac{2}{3}\sin 3x + \frac{2}{5}\sin 5x
+    nearest: square-wave-2 (0.014), sin-tall (0.036), sin (0.098), sin-plus-cos (0.098), lemniscate (0.101)
+circle  x^2 + y^2 = 1
+    nearest: deltoid (0.091), arcsin (0.095), superellipse-half (0.096), limacon-loop (0.121), rose-4 (0.129)
+circle-3  x^2 + y^2 = 9
+    nearest: squircle (0.039), ellipse-expanded (0.097), diamond (0.099), astroid (0.102), wave-packet (0.105)
+circle-right2  (x - 2)^2 + y^2 = 4
+    nearest: cardioid (0.070), limacon-loop (0.077), sideways (0.101), rose-4 (0.127), x2-factored-a (0.143)
+circle-moved  (x + 1)^2 + (y - 2)^2 = 9
+    nearest: cardioid-up (0.143), rose-4 (0.165), x2-standard-a (0.166), x4-four-roots (0.168), x3-double-root (0.172)
+circle-expanded  x^2 + y^2 - 4x + 2y = 4
+    nearest: limacon-dimple (0.110), cardioid (0.143), spiral-log (0.150), ellipse-moved (0.154), rose-4 (0.165)
+ellipse-wide  \frac{x^2}{16} + \frac{y^2}{4} = 1
+    nearest: lemniscate (0.089), wave-packet (0.095), square-wave-3 (0.106), diamond (0.111), circle-3 (0.111)
+ellipse-tall  \frac{x^2}{4} + \frac{y^2}{16} = 1
+    nearest: ellipse-expanded (0.059), x4-four-roots (0.096), x4-w (0.098), x5-five-roots (0.103), nephroid (0.105)
+ellipse-moved  \frac{(x - 1)^2}{9} + \frac{(y + 1)^2}{4} = 1
+    nearest: spiral-log (0.094), rose-4 (0.114), wave-packet (0.133), rose-sin-2 (0.144), cardioid (0.145)
+ellipse-expanded  9x^2 + 4y^2 = 36
+    nearest: diamond (0.052), ellipse-tall (0.059), astroid (0.081), x4-four-roots (0.087), circle-3 (0.097)
+sideways  x = y^2
+    nearest: circle-right2 (0.101), sqrt-flip (0.124), limacon-loop (0.125), sqrt (0.126), cardioid (0.154)
+sideways-flip  x = -y^2
+    nearest: sqrt-mirror (0.126), damped (0.151), rose-4 (0.174), lemniscate (0.177), rose-sin-2 (0.190)
+sideways-left3  x = y^2 - 3
+    nearest: elliptic-one (0.126), rose-4 (0.133), cos-3-fast (0.136), ellipse-wide (0.138), elliptic-two (0.145)
+sideways-wide  x = \frac{1}{4}y^2
+    nearest: cusp-curve (0.106), nodal (0.148), elliptic-one (0.156), elliptic-two (0.161), folium (0.167)
+sideways-moved  x = -(y - 2)^2 + 1
+    nearest: exp-10 (0.160), x2-standard-e (0.175), exp (0.176), abs-of-parabola (0.179), x2-left3 (0.187)
+hyperbola  x^2 - y^2 = 1
+    nearest: hyperbola-2 (0.080), hyperbola-steep (0.089), lissajous-3-2 (0.131), x4-m (0.138), lissajous-3-4 (0.143)
+hyperbola-2  x^2 - y^2 = 4
+    nearest: hyperbola (0.080), hyperbola-steep (0.091), lissajous-3-2 (0.144), lissajous-3-4 (0.150), lissajous-2-1 (0.158)
+hyperbola-up  y^2 - x^2 = 4
+    nearest: hyperbola (0.146), hyperbola-steep (0.149), lissajous-3-4 (0.149), lissajous-1-2 (0.158), x4-m (0.167)
+hyperbola-steep  \frac{x^2}{4} - \frac{y^2}{9} = 1
+    nearest: hyperbola (0.089), hyperbola-2 (0.091), x4-m (0.132), elliptic-two (0.133), lissajous-3-4 (0.133)
+hyperbola-xy  xy = 2
+    nearest: recip (0.057), astroid (0.102), recip-4 (0.106), wave-packet (0.131), rose-2 (0.133)
+diamond  |x| + |y| = 3
+    nearest: astroid (0.026), ellipse-expanded (0.052), wave-packet (0.079), circle-3 (0.099), x4-four-roots (0.108)
+squircle  x^4 + y^4 = 81
+    nearest: circle-3 (0.039), nephroid (0.073), lissajous-3-2 (0.111), lissajous-3-4 (0.115), x4-m (0.125)
+superellipse-half  \sqrt{|x|} + \sqrt{|y|} = \sqrt{3}
+    nearest: deltoid (0.088), wave-packet (0.095), circle (0.096), rose-4 (0.097), recip-flip (0.114)
+folium  x^3 + y^3 = 6xy
+    nearest: rose-sin-2 (0.089), rose-sin-3 (0.103), rose-4 (0.109), nodal (0.119), abs-half (0.147)
+elliptic-two  y^2 = x^3 - 4x
+    nearest: elliptic-one (0.078), rose-4 (0.102), x5-five-roots (0.104), rose-sin-2 (0.107), x4-w (0.124)
+elliptic-one  y^2 = x^3 - 3x + 3
+    nearest: elliptic-two (0.078), x5-five-roots (0.096), x4-four-roots (0.110), nodal (0.119), x4-w (0.120)
+cusp-curve  y^2 = x^3
+    nearest: nodal (0.103), sideways-wide (0.106), line-vertical (0.117), elliptic-one (0.127), elliptic-two (0.163)
+nodal  y^2 = x^3 + 2x^2
+    nearest: x5-five-roots (0.098), cusp-curve (0.103), rose-4 (0.117), elliptic-one (0.119), folium (0.119)
+rose-2  r = 4\cos 2\theta
+    nearest: rose-4 (0.049), wave-packet (0.058), lemniscate (0.076), lemniscate-small (0.093), lissajous-3-4 (0.094)
+rose-3  r = 4\cos 3\theta
+    nearest: rose-4 (0.069), deltoid (0.086), rose-2 (0.098), rose-sin-2 (0.099), wave-packet (0.101)
+rose-4  r = 4\cos 4\theta
+    nearest: wave-packet (0.048), rose-sin-2 (0.048), rose-2 (0.049), lissajous-3-4 (0.069), rose-3 (0.069)
+rose-sin-2  r = 4\sin 2\theta
+    nearest: rose-4 (0.048), lemniscate-tilted (0.075), x5-five-roots (0.082), folium (0.089), x4-m (0.090)
+rose-sin-3  r = 4\sin 3\theta
+    nearest: rose-4 (0.069), ln-abs (0.087), rose-2 (0.098), rose-sin-2 (0.099), wave-packet (0.100)
+cardioid  r = 2 + 2\cos\theta
+    nearest: circle-right2 (0.070), rose-4 (0.107), x2-right2-down3 (0.126), limacon-loop (0.131), rose-sin-2 (0.133)
+cardioid-up  r = 2 + 2\sin\theta
+    nearest: polar-circle (0.071), rose-4 (0.107), x4-four-roots (0.107), abs-of-parabola (0.111), rose-sin-2 (0.133)
+limacon-loop  r = 1 + 2\cos\theta
+    nearest: circle-right2 (0.077), rose-4 (0.107), circle (0.121), sideways (0.125), lemniscate-small (0.125)
+limacon-dimple  r = 3 + 2\cos\theta
+    nearest: circle-expanded (0.110), cardioid (0.159), rose-4 (0.165), lissajous-3-4 (0.167), x2-factored-d (0.175)
+polar-circle  r = 4\sin\theta
+    nearest: cardioid-up (0.071), x4-two-touches (0.079), x4 (0.091), x2 (0.101), abs-of-parabola (0.106)
+spiral-archimedes  r = 0.4\theta, 0 \le \theta \le 4\pi
+    nearest: rose-4 (0.092), lissajous-3-4 (0.093), lissajous-3-2 (0.106), rose-sin-2 (0.113), spiral-fermat (0.116)
+spiral-log  r = e^{\frac{\theta}{4}}, -2\pi \le \theta \le 2\pi
+    nearest: rose-4 (0.086), ellipse-moved (0.094), rose-sin-2 (0.112), rose-2 (0.115), wave-packet (0.122)
+spiral-fermat  r = \sqrt{2\theta}, 0 \le \theta \le 4\pi
+    nearest: lissajous-3-4 (0.073), lissajous-3-2 (0.085), lissajous-2-1 (0.103), rose-4 (0.105), lissajous-1-2 (0.107)
+spiral-hyperbolic  r = \frac{4}{\theta}
+    nearest: cycloid-prolate (0.126), logistic-steep (0.149), rose-4 (0.150), logistic-4 (0.151), exp-charge (0.154)
+lemniscate  r^2 = 16\cos 2\theta
+    nearest: lemniscate-small (0.065), rose-2 (0.076), chirp (0.077), sin-pi (0.078), rose-4 (0.088)
+lemniscate-small  r^2 = 9\cos 2\theta
+    nearest: lemniscate (0.065), sin-pi (0.079), rose-4 (0.087), sin-fast (0.091), sin-flip (0.093)
+lemniscate-tilted  r^2 = 16\sin 2\theta
+    nearest: rose-sin-2 (0.075), rose-4 (0.086), x-plus-2sin (0.119), wave-packet (0.128), x3-minus-3x (0.130)
+lissajous-1-2  (4\sin t, 4\sin 2t)
+    nearest: lissajous-3-4 (0.064), lissajous-3-2 (0.082), rose-4 (0.098), cos-3-fast (0.103), spiral-fermat (0.107)
+lissajous-2-1  (4\sin 2t, 4\sin t)
+    nearest: lissajous-3-2 (0.060), lissajous-3-4 (0.076), rose-4 (0.098), spiral-fermat (0.103), rose-sin-2 (0.114)
+lissajous-3-2  (4\sin 3t, 4\sin 2t)
+    nearest: lissajous-3-4 (0.055), lissajous-2-1 (0.060), rose-4 (0.075), lissajous-1-2 (0.082), spiral-fermat (0.085)
+lissajous-3-4  (4\sin 3t, 4\sin 4t)
+    nearest: lissajous-3-2 (0.055), lissajous-1-2 (0.064), rose-4 (0.069), spiral-fermat (0.073), lissajous-2-1 (0.076)
+lissajous-phase  (4\sin(t + \frac{\pi}{4}), 4\sin t)
+    nearest: lissajous-3-4 (0.108), lissajous-3-2 (0.138), squircle (0.141), circle-3 (0.145), diamond (0.151)
+cycloid  (t - \sin t, 1 - \cos t), -2\pi \le t \le 2\pi
+    nearest: cusp (0.052), cycloid-curtate (0.062), abs-half (0.081), ln-x2 (0.086), abs-of-sin (0.097)
+cycloid-prolate  (t - 2\sin t, 1 - 2\cos t), -2\pi \le t \le 2\pi
+    nearest: abs-of-sin (0.115), ln-x2 (0.121), spiral-hyperbolic (0.126), cusp (0.129), rose-sin-2 (0.130)
+cycloid-curtate  (t - \frac{1}{2}\sin t, 1 - \frac{1}{2}\cos t), -2\pi \le t \le 2\pi
+    nearest: cycloid (0.062), abs-half (0.073), cusp (0.089), sin-squared (0.103), logistic (0.117)
+astroid  (4\cos^3 t, 4\sin^3 t)
+    nearest: diamond (0.026), wave-packet (0.069), recip (0.079), recip-flip (0.079), ellipse-expanded (0.081)
+deltoid  (2\cos t + \cos 2t, 2\sin t - \sin 2t)
+    nearest: rose-3 (0.086), superellipse-half (0.088), circle (0.091), rose-4 (0.098), x5-five-roots (0.122)
+nephroid  (3\cos t - \cos 3t, 3\sin t - \sin 3t)
+    nearest: squircle (0.073), ellipse-tall (0.105), circle-3 (0.107), lissajous-3-2 (0.118), lissajous-2-1 (0.118)

@@ -1,0 +1,10 @@
+CC0 1.0 Universal (public domain dedication)
+
+The equations, the facts worked out about them, and the build scripts in this repository are dedicated to the
+public domain under CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+
+You can copy, modify, distribute and use them, even commercially, without asking permission and without
+attribution. They are given as they are, without warranty of any kind.
+
+Nothing here comes from anyone else's work: every row is made by build/build.ts from the definitions in
+build/curves.ts, and everything about each curve is computed.

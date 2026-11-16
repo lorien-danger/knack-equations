@@ -1,0 +1,7 @@
+{
+ "name": "knack-equations-build",
+ "private": true,
+ "type": "module",
+ "scripts": {"build": "tsx build.ts"},
+ "devDependencies": {"tsx": "4.20.6"}
+}
