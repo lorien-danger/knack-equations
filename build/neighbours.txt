@@ -119,7 +119,7 @@ x4-two-touches  y = (x - 1)^2(x + 1)^2
 x5-five-roots  y = x(x^2 - 1)(x^2 - 4)
     nearest: x4-w (0.057), x3-minus-3x (0.059), x4-four-roots (0.068), rose-4 (0.075), rose-sin-2 (0.082)
 recip  y = \frac{1}{x}
-    nearest: hyperbola-xy (0.057), astroid (0.079), wave-packet (0.104), astroid-implicit (0.114), rose-4 (0.115)
+    nearest: hyperbola-xy (0.057), astroid (0.079), wave-packet (0.104), superellipse-half (0.114), rose-4 (0.115)
 recip-right2  y = \frac{1}{x - 2}
     nearest: rose-4 (0.138), recip2-right2 (0.141), wave-packet (0.149), nodal (0.151), rose-2 (0.157)
 recip-up2  y = \frac{1}{x} + 2
@@ -127,7 +127,7 @@ recip-up2  y = \frac{1}{x} + 2
 recip-moved  y = \frac{1}{x + 1} - 2
     nearest: recip2-down2 (0.107), rose-4 (0.151), spiral-archimedes (0.159), rose-3 (0.164), rose-sin-2 (0.167)
 recip-flip  y = -\frac{1}{x}
-    nearest: astroid (0.079), wave-packet (0.104), astroid-implicit (0.114), rose-4 (0.115), rose-2 (0.120)
+    nearest: astroid (0.079), wave-packet (0.104), superellipse-half (0.114), rose-4 (0.115), rose-2 (0.120)
 recip-4  y = \frac{4}{x}
     nearest: hyperbola-xy (0.106), rational-bump (0.145), recip (0.175), lemniscate-tilted (0.197), wave-packet (0.201)
 recip-linear  y = \frac{2x + 1}{x - 1}
@@ -229,7 +229,7 @@ ln-up2  y = \ln x + 2
 ln-flip  y = -\ln x
     nearest: x2-factored-a (0.153), line-minus-2x-up3 (0.153), recip2-down2 (0.172), exp-decay (0.177), arccos (0.178)
 ln-mirror  y = \ln(-x)
-    nearest: ln-abs (0.098), rose-sin-3 (0.169), exp-flip (0.177), rose-4 (0.191), astroid-implicit (0.199)
+    nearest: ln-abs (0.098), rose-sin-3 (0.169), exp-flip (0.177), rose-4 (0.191), superellipse-half (0.199)
 log10  y = \log_{10} x
     nearest: ln (0.053), x-exp (0.091), log2 (0.096), ln-abs (0.126), sqrt-down2 (0.133)
 log2  y = \log_2 x
@@ -293,7 +293,7 @@ x-sin-x  y = x\sin x
 damped  y = 2e^{-\frac{x}{4}}\sin 3x
     nearest: rose-4 (0.098), sin-pi (0.105), lissajous-3-4 (0.109), cos-3-fast (0.110), rose-sin-2 (0.120)
 wave-packet  y = 4e^{-\frac{x^2}{8}}\cos 3x
-    nearest: rose-4 (0.048), rose-2 (0.058), astroid (0.069), diamond (0.079), astroid-implicit (0.095)
+    nearest: rose-4 (0.048), rose-2 (0.058), astroid (0.069), diamond (0.079), superellipse-half (0.095)
 sinc  y = \frac{4\sin x}{x}
     nearest: bell-3-wide (0.102), sech (0.117), recip2 (0.124), bell-3 (0.126), abs-of-parabola (0.139)
 x-exp  y = 4xe^{-x}
@@ -321,7 +321,7 @@ square-wave-2  y = 2\sin x + \frac{2}{3}\sin 3x
 square-wave-3  y = 2\sin x + \frac{2}{3}\sin 3x + \frac{2}{5}\sin 5x
     nearest: square-wave-2 (0.014), sin-tall (0.036), sin (0.098), sin-plus-cos (0.098), lemniscate (0.101)
 circle  x^2 + y^2 = 1
-    nearest: deltoid (0.091), arcsin (0.095), astroid-implicit (0.096), limacon-loop (0.121), rose-4 (0.129)
+    nearest: deltoid (0.091), arcsin (0.095), superellipse-half (0.096), limacon-loop (0.121), rose-4 (0.129)
 circle-3  x^2 + y^2 = 9
     nearest: squircle (0.039), ellipse-expanded (0.097), diamond (0.099), astroid (0.102), wave-packet (0.105)
 circle-right2  (x - 2)^2 + y^2 = 4
@@ -362,7 +362,7 @@ diamond  |x| + |y| = 3
     nearest: astroid (0.026), ellipse-expanded (0.052), wave-packet (0.079), circle-3 (0.099), x4-four-roots (0.108)
 squircle  x^4 + y^4 = 81
     nearest: circle-3 (0.039), nephroid (0.073), lissajous-3-2 (0.111), lissajous-3-4 (0.115), x4-m (0.125)
-astroid-implicit  \sqrt{|x|} + \sqrt{|y|} = \sqrt{3}
+superellipse-half  \sqrt{|x|} + \sqrt{|y|} = \sqrt{3}
     nearest: deltoid (0.088), wave-packet (0.095), circle (0.096), rose-4 (0.097), recip-flip (0.114)
 folium  x^3 + y^3 = 6xy
     nearest: rose-sin-2 (0.089), rose-sin-3 (0.103), rose-4 (0.109), nodal (0.119), abs-half (0.147)
@@ -427,6 +427,6 @@ cycloid-curtate  (t - \frac{1}{2}\sin t, 1 - \frac{1}{2}\cos t), -2\pi \le t \le
 astroid  (4\cos^3 t, 4\sin^3 t)
     nearest: diamond (0.026), wave-packet (0.069), recip (0.079), recip-flip (0.079), ellipse-expanded (0.081)
 deltoid  (2\cos t + \cos 2t, 2\sin t - \sin 2t)
-    nearest: rose-3 (0.086), astroid-implicit (0.088), circle (0.091), rose-4 (0.098), x5-five-roots (0.122)
+    nearest: rose-3 (0.086), superellipse-half (0.088), circle (0.091), rose-4 (0.098), x5-five-roots (0.122)
 nephroid  (3\cos t - \cos 3t, 3\sin t - \sin 3t)
     nearest: squircle (0.073), ellipse-tall (0.105), circle-3 (0.107), lissajous-3-2 (0.118), lissajous-2-1 (0.118)

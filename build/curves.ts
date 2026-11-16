@@ -243,7 +243,7 @@ export const CURVES: Def[] = [
 	// ---- beyond the conics ----
 	{ id: 'diamond', eq: '|x| + |y| = 3', family: B('superellipse'), form: '|x|^n + |y|^n = r^n' },
 	{ id: 'squircle', eq: 'x^4 + y^4 = 81', family: B('superellipse'), form: '|x|^n + |y|^n = r^n', name: 'squircle' },
-	{ id: 'astroid-implicit', eq: '\\sqrt{|x|} + \\sqrt{|y|} = \\sqrt{3}', family: B('superellipse'), form: '|x|^n + |y|^n = r^n' },
+	{ id: 'superellipse-half', eq: '\\sqrt{|x|} + \\sqrt{|y|} = \\sqrt{3}', family: B('superellipse'), form: '|x|^n + |y|^n = r^n' },
 	{ id: 'folium', eq: 'x^3 + y^3 = 6xy', family: B('cubic curve'), form: 'x^3 + y^3 = 3axy', name: 'folium of Descartes', asymptotes: ['y = -x - 2'] },
 	{ id: 'elliptic-two', eq: 'y^2 = x^3 - 4x', family: B('cubic curve'), form: 'y^2 = x^3 + ax^2 + bx + c', name: 'elliptic curve' },
 	{ id: 'elliptic-one', eq: 'y^2 = x^3 - 3x + 3', family: B('cubic curve'), form: 'y^2 = x^3 + ax^2 + bx + c', name: 'elliptic curve' },
