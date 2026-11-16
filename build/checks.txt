@@ -58,13 +58,13 @@ symmetry:
     79 × neither even nor odd
     43 × even
     38 × odd
-    15 × mirror in the x-axis
-    14 × mirror in the y-axis, mirror in the x-axis, half-turn about the origin
-    9 × mirror in the y-axis, mirror in the x-axis, half-turn about the origin, mirror in y = x
+    15 × about the x-axis
+    14 × about the y-axis, about the x-axis, about the origin
+    9 × about the y-axis, about the x-axis, about the origin, about y = x
     8 × no symmetry
-    6 × mirror in the y-axis
-    2 × half-turn about the origin, mirror in y = x
-    1 × mirror in y = x
+    6 × about the y-axis
+    2 × about the origin, about y = x
+    1 × about y = x
 far left, far right:
     33 × left: up, right: up
     31 × left: levels off, right: levels off

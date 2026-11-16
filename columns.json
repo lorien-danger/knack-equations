@@ -28,21 +28,21 @@
    ]
   },
   {
-   "name": "Roots, turns and ends from the formula",
+   "name": "Roots, turning points and repeats from the formula",
    "columns": [
     "equation",
     "roots",
     "turning points",
-    "far left, far right"
+    "repeats every"
    ]
   },
   {
-   "name": "Symmetry, asymptotes and repeats from the formula",
+   "name": "Ends, asymptotes and symmetry from the formula",
    "columns": [
     "equation",
-    "symmetry",
+    "far left, far right",
     "asymptotes",
-    "repeats every"
+    "symmetry"
    ]
   },
   {

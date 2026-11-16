@@ -201,10 +201,10 @@ function curveSymmetry(src: string): string[] {
 		return true;
 	};
 	const out: string[] = [];
-	if (test((u, v) => [1 - u, v])) out.push('mirror in the y-axis');
-	if (test((u, v) => [u, 1 - v])) out.push('mirror in the x-axis');
-	if (test((u, v) => [1 - u, 1 - v])) out.push('half-turn about the origin');
-	if (test((u, v) => [v, u])) out.push('mirror in y = x');
+	if (test((u, v) => [1 - u, v])) out.push('about the y-axis');
+	if (test((u, v) => [u, 1 - v])) out.push('about the x-axis');
+	if (test((u, v) => [1 - u, 1 - v])) out.push('about the origin');
+	if (test((u, v) => [v, u])) out.push('about y = x');
 	return out.length ? out : ['no symmetry'];
 }
 
