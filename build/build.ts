@@ -128,7 +128,7 @@ function roots(f: (x: number) => number, L: number): number[] {
 	// touching: a local minimum of |f| that comes down to 0
 	for (let i = -n + 1; i < n; i++) {
 		const a = Math.abs(v(i - 1)), b = Math.abs(v(i)), c = Math.abs(v(i + 1));
-		if (!(b <= a && b <= c && b < 1e-3 * Math.max(a, c) + 1e-3 && !zero(i))) continue;
+		if (!(b <= a && b <= c && b < 1e-3 * Math.max(a, c) + 1e-3 && Math.max(a, c) > 1e-200 && !zero(i))) continue;
 		if (Math.sign(v(i - 1)) !== Math.sign(v(i + 1))) continue;
 		let lo = at(i - 1), hi = at(i + 1);
 		for (let k = 0; k < 100; k++) { const m1 = lo + (hi - lo) / 3, m2 = hi - (hi - lo) / 3; if (Math.abs(f(m1)) < Math.abs(f(m2))) hi = m2; else lo = m1; }
