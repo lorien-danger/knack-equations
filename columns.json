@@ -144,7 +144,6 @@
   {
    "name": "asymptotes",
    "type": "parts",
-   "tex": true,
    "label": "Asymptotes"
   },
   {
@@ -160,8 +159,14 @@
   {
    "name": "repeats every",
    "type": "plain",
-   "tex": true,
-   "label": "Repeats every"
+   "label": "Repeats every",
+   "order": [
+    "never",
+    "2",
+    "π",
+    "2π",
+    "4π"
+   ]
   },
   {
    "name": "meets the y-axis at",

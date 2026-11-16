@@ -19,10 +19,10 @@
   {"name": "made from its parent by", "type": "parts", "label": "Made from its parent by"},
   {"name": "roots", "type": "plain", "label": "Roots", "order": ["none", "1", "2", "3", "4", "5", "infinitely many"]},
   {"name": "turning points", "type": "plain", "label": "Turning points", "order": ["none", "1", "2", "3", "4", "5", "infinitely many"]},
-  {"name": "asymptotes", "type": "parts", "tex": true, "label": "Asymptotes"},
+  {"name": "asymptotes", "type": "parts", "label": "Asymptotes"},
   {"name": "symmetry", "type": "parts", "label": "Symmetric about"},
   {"name": "far left, far right", "type": "plain", "label": "Far left, far right"},
-  {"name": "repeats every", "type": "plain", "tex": true, "label": "Repeats every"},
+  {"name": "repeats every", "type": "plain", "label": "Repeats every", "order": ["never", "2", "π", "2π", "4π"]},
   {"name": "meets the y-axis at", "type": "number", "label": "Meets the y-axis at", "digits": 3},
   {"name": "derivative", "type": "plane", "space": "formula", "label": "Derivative"},
   {"name": "derivative graph", "type": "plane", "space": "graph", "label": "Graph of the derivative"}

@@ -3,12 +3,12 @@ these are notes for whoever chooses the curves.
 
 sinc: undefined at x = 0 but no asymptote there (a single missing point)
 
-214 curves; 159 of them y as a function of x. Families:
+215 curves; 160 of them y as a function of x. Families:
   polynomial › line: 14
   polynomial › quadratic: 23
   polynomial › cubic: 15
   polynomial › degree 4 and up: 7
-  rational › reciprocal: 7
+  rational › reciprocal: 8
   rational › reciprocal square: 4
   rational › quotient of polynomials: 6
   root and absolute value › square root: 7
@@ -40,7 +40,7 @@ sinc: undefined at x = 0 but no asymptote there (a single missing point)
   parametric curve › rolling circle: 3
 
 roots:
-    67 × 1
+    68 × 1
     38 × none
     23 × 2
     23 × infinitely many
@@ -48,14 +48,14 @@ roots:
     2 × 4
     1 × 5
 turning points:
-    75 × none
+    76 × none
     43 × 1
     25 × infinitely many
     10 × 2
     5 × 3
     1 × 4
 symmetry:
-    78 × neither
+    79 × neither
     43 × even
     38 × odd
     15 × x-axis
@@ -67,8 +67,8 @@ symmetry:
     1 × y = x
 far left, far right:
     33 × up, up
+    31 × levels off, levels off
     30 × down, up
-    30 × levels off, levels off
     22 × repeats, repeats
     9 × stops, up
     7 × up, down
@@ -84,10 +84,10 @@ far left, far right:
     1 × growing waves, levels off
     1 × waves, waves
 repeats every:
-    136 × \text{never}
-    14 × 2 \pi
-    6 × \pi
-    1 × 4 \pi
+    137 × never
+    14 × 2π
+    6 × π
+    1 × 4π
     1 × 2
 made from its parent by:
     17 × nothing: the parent itself
@@ -120,6 +120,7 @@ made from its parent by:
     1 × shifted left, shifted up
     1 × squashed vertically, shifted right
     1 × stretched vertically, shifted right, shifted up
+    1 × reflected in the x-axis, stretched vertically, shifted left, shifted up
     1 × reflected in the x-axis, stretched vertically
     1 × reflected in the y-axis, stretched horizontally
     1 × reflected in the x-axis, reflected in the y-axis, stretched vertically, shifted up

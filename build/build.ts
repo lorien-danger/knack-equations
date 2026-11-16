@@ -418,7 +418,7 @@ for (const d of CURVES) {
 			if (!(gap(side * 1e3) < 1e-2 && gap(side * 1e4) <= gap(side * 1e3) + 1e-12)) fail(d.id, `${line} is not approached on the ${side < 0 ? 'left' : 'right'}`);
 			if (!asym.includes(line)) asym.push(line);
 		}
-		row.asymptotes = asym.length ? asym : ['\\text{none}'];
+		row.asymptotes = asym.length ? asym.map(plain) : ['none'];
 
 		// ---- symmetry, ends, period, y-intercept ----
 		row.symmetry = functionSymmetry(f);
@@ -431,10 +431,10 @@ for (const d of CURVES) {
 			const repeats = (p: number) => { for (let i = 0; i < 400; i++) { const x = -7.3 + i * 0.0371, a = f!(x), b = f!(x + p); if (Number.isFinite(a) && Number.isFinite(b) && Math.abs(a) < 1e3 && !near(a, b, 1e-7)) return false; } return true; };
 			if (!repeats(P)) fail(d.id, `doesn't repeat every ${D.period}`);
 			for (const q of [2, 3, 4, 5, 6]) if (repeats(P / q)) fail(d.id, `repeats every ${D.period}/${q}, not just ${D.period}`);
-			row['repeats every'] = D.period;
+			row['repeats every'] = plain(D.period);
 		} else if (!D.constant) {
 			for (const p of [Math.PI, 2 * Math.PI, 1, 2, 4]) { let same = true; for (let i = 0; i < 200; i++) { const x = -3.1 + i * 0.031; if (!near(f(x), f(x + p), 1e-9)) { same = false; break; } } if (same) fail(d.id, `sympy found no period, but it repeats every ${p}`); }
-			row['repeats every'] = '\\text{never}';
+			row['repeats every'] = 'never';
 		}
 		const y0 = f(0);
 		if (Number.isFinite(y0)) row['meets the y-axis at'] = +y0.toPrecision(4);
@@ -442,7 +442,7 @@ for (const d of CURVES) {
 		// ---- a curve that is not y as one function of x ----
 		row.symmetry = curveSymmetry(d.eq);
 		for (const a of d.asymptotes ?? []) checkCurveAsymptote(d, a);
-		row.asymptotes = d.asymptotes?.length ? d.asymptotes : ['\\text{none}'];
+		row.asymptotes = d.asymptotes?.length ? d.asymptotes.map(plain) : ['none'];
 	}
 	rows.push(row);
 }
@@ -451,6 +451,12 @@ function explicitFx(v: string): Node {
 	// "x = 2": the 2, as a function of nothing
 	const s = read(v)[0] as Extract<Node, { k: 'rel' }>;
 	return s.items[1];
+}
+/** a little TeX as plain text, for columns of words the app doesn't typeset (a list of tags): π/2, −3x/2 */
+function plain(tex: string): string {
+	let s = tex.replace(/\\text\{([^}]*)\}/g, '$1');
+	s = s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}([a-z]*)/g, (_, a, b, l) => `${a}${l}/${b}`);
+	return s.replace(/\\pi/g, 'π').replace(/-/g, '−').replace(/\s+/g, ' ').replace(/ *\/ */g, '/').replace(/([0-9n]) π/g, '$1π').trim();
 }
 function count(n: number) { return n === Infinity ? 'infinitely many' : n === 0 ? 'none' : String(n); }
 
