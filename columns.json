@@ -12,34 +12,45 @@
    ]
   },
   {
-   "name": "Families, forms and parents",
+   "name": "Families and their general forms",
    "columns": [
     "graph",
     "family",
-    "general form",
+    "general form"
+   ]
+  },
+  {
+   "name": "Moving the parent",
+   "columns": [
+    "graph",
     "parent",
     "made from its parent by"
    ]
   },
   {
-   "name": "What the formula tells you",
+   "name": "Roots, turns and ends from the formula",
    "columns": [
     "equation",
     "roots",
     "turning points",
-    "asymptotes",
+    "far left, far right"
+   ]
+  },
+  {
+   "name": "Symmetry, asymptotes and repeats from the formula",
+   "columns": [
+    "equation",
     "symmetry",
-    "far left, far right",
+    "asymptotes",
     "repeats every"
    ]
   },
   {
    "name": "A graph and its derivative",
    "columns": [
-    "equation",
     "graph",
-    "derivative",
-    "derivative graph"
+    "derivative graph",
+    "derivative"
    ]
   }
  ],
@@ -118,13 +129,13 @@
    "type": "plain",
    "label": "Roots",
    "order": [
-    "none",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "infinitely many"
+    "no roots",
+    "1 root",
+    "2 roots",
+    "3 roots",
+    "4 roots",
+    "5 roots",
+    "infinitely many roots"
    ]
   },
   {
@@ -132,13 +143,13 @@
    "type": "plain",
    "label": "Turning points",
    "order": [
-    "none",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "infinitely many"
+    "no turning points",
+    "1 turning point",
+    "2 turning points",
+    "3 turning points",
+    "4 turning points",
+    "5 turning points",
+    "infinitely many turning points"
    ]
   },
   {
@@ -149,7 +160,7 @@
   {
    "name": "symmetry",
    "type": "parts",
-   "label": "Symmetric about"
+   "label": "Symmetry"
   },
   {
    "name": "far left, far right",
@@ -159,13 +170,13 @@
   {
    "name": "repeats every",
    "type": "plain",
-   "label": "Repeats every",
+   "label": "Repeats",
    "order": [
-    "never",
-    "2",
-    "π",
-    "2π",
-    "4π"
+    "never repeats",
+    "repeats every 2",
+    "repeats every π",
+    "repeats every 2π",
+    "repeats every 4π"
    ]
   },
   {

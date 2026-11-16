@@ -40,55 +40,55 @@ sinc: undefined at x = 0 but no asymptote there (a single missing point)
   parametric curve › rolling circle: 3
 
 roots:
-    68 × 1
-    38 × none
-    23 × 2
-    23 × infinitely many
-    5 × 3
-    2 × 4
-    1 × 5
+    68 × 1 root
+    38 × no roots
+    23 × 2 roots
+    23 × infinitely many roots
+    5 × 3 roots
+    2 × 4 roots
+    1 × 5 roots
 turning points:
-    76 × none
-    43 × 1
-    25 × infinitely many
-    10 × 2
-    5 × 3
-    1 × 4
+    76 × no turning points
+    43 × 1 turning point
+    25 × infinitely many turning points
+    10 × 2 turning points
+    5 × 3 turning points
+    1 × 4 turning points
 symmetry:
-    79 × neither
+    79 × neither even nor odd
     43 × even
     38 × odd
-    15 × x-axis
-    14 × y-axis, x-axis, origin
-    9 × y-axis, x-axis, origin, y = x
-    8 × none
-    6 × y-axis
-    2 × origin, y = x
-    1 × y = x
+    15 × mirror in the x-axis
+    14 × mirror in the y-axis, mirror in the x-axis, half-turn about the origin
+    9 × mirror in the y-axis, mirror in the x-axis, half-turn about the origin, mirror in y = x
+    8 × no symmetry
+    6 × mirror in the y-axis
+    2 × half-turn about the origin, mirror in y = x
+    1 × mirror in y = x
 far left, far right:
-    33 × up, up
-    31 × levels off, levels off
-    30 × down, up
-    22 × repeats, repeats
-    9 × stops, up
-    7 × up, down
-    7 × down, down
-    6 × levels off, up
-    3 × stops, stops
-    2 × stops, down
-    2 × up, stops
-    2 × up, levels off
-    2 × down, levels off
-    1 × levels off, down
-    1 × growing waves, growing waves
-    1 × growing waves, levels off
-    1 × waves, waves
+    33 × left: up, right: up
+    31 × left: levels off, right: levels off
+    30 × left: down, right: up
+    22 × left: repeats, right: repeats
+    9 × left: stops, right: up
+    7 × left: up, right: down
+    7 × left: down, right: down
+    6 × left: levels off, right: up
+    3 × left: stops, right: stops
+    2 × left: stops, right: down
+    2 × left: up, right: stops
+    2 × left: up, right: levels off
+    2 × left: down, right: levels off
+    1 × left: levels off, right: down
+    1 × left: growing waves, right: growing waves
+    1 × left: growing waves, right: levels off
+    1 × left: waves, right: waves
 repeats every:
-    137 × never
-    14 × 2π
-    6 × π
-    1 × 4π
-    1 × 2
+    137 × never repeats
+    14 × repeats every 2π
+    6 × repeats every π
+    1 × repeats every 4π
+    1 × repeats every 2
 made from its parent by:
     17 × nothing: the parent itself
     8 × reflected in the x-axis

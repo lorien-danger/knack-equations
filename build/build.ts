@@ -172,14 +172,14 @@ function functionSymmetry(f: (x: number) => number): string[] {
 	let pairs = 0, even = true, odd = true;
 	for (let k = 1; k <= 4000; k++) {
 		const x = k / 200 + 0.000123, a = f(x), b = f(-x);
-		if (Number.isFinite(a) !== Number.isFinite(b)) return ['neither'];
+		if (Number.isFinite(a) !== Number.isFinite(b)) return ['neither even nor odd'];
 		if (!Number.isFinite(a)) continue;
 		pairs++;
 		if (!near(a, b, 1e-9)) even = false;
 		if (!near(a, -b, 1e-9)) odd = false;
 	}
-	if (pairs < 100) return ['neither'];
-	return even ? ['even'] : odd ? ['odd'] : ['neither'];
+	if (pairs < 100) return ['neither even nor odd'];
+	return even ? ['even'] : odd ? ['odd'] : ['neither even nor odd'];
 }
 
 /** what a drawn curve is symmetric about, from its points in the window (which is symmetric itself) */
@@ -201,11 +201,11 @@ function curveSymmetry(src: string): string[] {
 		return true;
 	};
 	const out: string[] = [];
-	if (test((u, v) => [1 - u, v])) out.push('y-axis');
-	if (test((u, v) => [u, 1 - v])) out.push('x-axis');
-	if (test((u, v) => [1 - u, 1 - v])) out.push('origin');
-	if (test((u, v) => [v, u])) out.push('y = x');
-	return out.length ? out : ['none'];
+	if (test((u, v) => [1 - u, v])) out.push('mirror in the y-axis');
+	if (test((u, v) => [u, 1 - v])) out.push('mirror in the x-axis');
+	if (test((u, v) => [1 - u, 1 - v])) out.push('half-turn about the origin');
+	if (test((u, v) => [v, u])) out.push('mirror in y = x');
+	return out.length ? out : ['no symmetry'];
 }
 
 // ---------- how a row is its parent moved ----------
@@ -382,11 +382,11 @@ for (const d of CURVES) {
 		// ---- roots and turning points: counted numerically; "infinitely many" when they go on past any bound ----
 		const r30 = roots(f, 30), r60 = roots(f, 60);
 		const nRoots = r60.length > r30.length ? Infinity : r60.length;
-		row.roots = count(nRoots);
+		row.roots = count(nRoots, 'root');
 		if (Number.isFinite(nRoots) && r60.some((x) => x < LO + 0.1 || x > HI - 0.1)) note(`${d.id}: a root outside the window, at ${r60.find((x) => x < LO + 0.1 || x > HI - 0.1)!.toFixed(3)}`);
 		const t30 = turns(f, 30), t60 = turns(f, 60);
 		const nTurns = t60.length > t30.length ? Infinity : t60.length;
-		row['turning points'] = count(nTurns);
+		row['turning points'] = count(nTurns, 'turning point');
 		if (Number.isFinite(nTurns)) for (const [x, y] of t60) if (x < LO || x > HI || y < LO || y > HI) note(`${d.id}: a turning point outside the window, at (${x.toFixed(2)}, ${y.toFixed(2)})`);
 
 		// ---- asymptotes: sympy's, each checked ----
@@ -418,23 +418,23 @@ for (const d of CURVES) {
 			if (!(gap(side * 1e3) < 1e-2 && gap(side * 1e4) <= gap(side * 1e3) + 1e-12)) fail(d.id, `${line} is not approached on the ${side < 0 ? 'left' : 'right'}`);
 			if (!asym.includes(line)) asym.push(line);
 		}
-		row.asymptotes = asym.length ? asym.map(plain) : ['none'];
+		row.asymptotes = asym.length ? asym.map(plain) : ['no asymptotes'];
 
 		// ---- symmetry, ends, period, y-intercept ----
 		row.symmetry = functionSymmetry(f);
 		const [l, r] = D.ends;
 		checkEnd(d.id, f, -1, l);
 		checkEnd(d.id, f, 1, r);
-		row['far left, far right'] = `${l}, ${r}`;
+		row['far left, far right'] = `left: ${l}, right: ${r}`;
 		if (D.period) {
 			const P = D.periodValue!;
 			const repeats = (p: number) => { for (let i = 0; i < 400; i++) { const x = -7.3 + i * 0.0371, a = f!(x), b = f!(x + p); if (Number.isFinite(a) && Number.isFinite(b) && Math.abs(a) < 1e3 && !near(a, b, 1e-7)) return false; } return true; };
 			if (!repeats(P)) fail(d.id, `doesn't repeat every ${D.period}`);
 			for (const q of [2, 3, 4, 5, 6]) if (repeats(P / q)) fail(d.id, `repeats every ${D.period}/${q}, not just ${D.period}`);
-			row['repeats every'] = plain(D.period);
+			row['repeats every'] = `repeats every ${plain(D.period)}`;
 		} else if (!D.constant) {
 			for (const p of [Math.PI, 2 * Math.PI, 1, 2, 4]) { let same = true; for (let i = 0; i < 200; i++) { const x = -3.1 + i * 0.031; if (!near(f(x), f(x + p), 1e-9)) { same = false; break; } } if (same) fail(d.id, `sympy found no period, but it repeats every ${p}`); }
-			row['repeats every'] = 'never';
+			row['repeats every'] = 'never repeats';
 		}
 		const y0 = f(0);
 		if (Number.isFinite(y0)) row['meets the y-axis at'] = +y0.toPrecision(4);
@@ -442,7 +442,7 @@ for (const d of CURVES) {
 		// ---- a curve that is not y as one function of x ----
 		row.symmetry = curveSymmetry(d.eq);
 		for (const a of d.asymptotes ?? []) checkCurveAsymptote(d, a);
-		row.asymptotes = d.asymptotes?.length ? d.asymptotes.map(plain) : ['none'];
+		row.asymptotes = d.asymptotes?.length ? d.asymptotes.map(plain) : ['no asymptotes'];
 	}
 	rows.push(row);
 }
@@ -458,7 +458,8 @@ function plain(tex: string): string {
 	s = s.replace(/\\frac\{([^{}]*)\}\{([^{}]*)\}([a-z]*)/g, (_, a, b, l) => `${a}${l}/${b}`);
 	return s.replace(/\\pi/g, 'π').replace(/-/g, '−').replace(/\s+/g, ' ').replace(/ *\/ */g, '/').replace(/([0-9n]) π/g, '$1π').trim();
 }
-function count(n: number) { return n === Infinity ? 'infinitely many' : n === 0 ? 'none' : String(n); }
+/** a count that says what it counts, so it reads alone: "no roots", "1 root", "infinitely many roots" */
+function count(n: number, what: string) { return n === Infinity ? `infinitely many ${what}s` : n === 0 ? `no ${what}s` : n === 1 ? `1 ${what}` : `${n} ${what}s`; }
 
 function checkEnd(id: string, f: (x: number) => number, side: number, what: string) {
 	const at = (x: number) => f(side * x);
